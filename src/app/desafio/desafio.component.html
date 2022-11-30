@@ -1,0 +1,12 @@
+<ul>
+  <li
+    *ngFor="let person of staff"
+    [ngClass]="{
+      student: person.role === 'student',
+      tutor: person.role === 'tutor',
+      professor: person.role === 'professor'
+    }"
+  >
+    name: {{ person.name }} role: {{ person.role }}
+  </li>
+</ul>
